@@ -16,9 +16,9 @@ public class MySQLConnection {
         connPools = new Stack<Connection>();
 
         classForName = "com.mysql.jdbc.Driver";
-        url = "jdbc:mysql://127.0.0.1/hupes";
+        url = "jdbc:mysql://localhost/sys_edu_hupes";
         username = "root";
-        password = "123456";
+        password = "123456789";
 
         try {
             Class.forName(classForName).newInstance();

@@ -28,10 +28,9 @@ public class StudentDAO {
                 ps.setString(3,student.getGender());
                 ps.setString(4, student.getDateBirth());
             }
-            ps.executeBatch();
-
-            // Gọi commit() để commit giao dịch với DB
-            conn.commit();
+            //excute
+            ps.execute();
+            conn.close();
 
         } catch (Exception exception) {
             exception.printStackTrace();
@@ -46,6 +45,5 @@ public class StudentDAO {
             }
             MySQLConnection.disconnect(conn);
         }
-
     }
 }

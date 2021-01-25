@@ -56,7 +56,7 @@ public class ReadExcel {
                 int columnIndex = cell.getColumnIndex();
                 switch (columnIndex){
                     case COLUMN_INDEX_ID:
-                        student.setStudentId(String.valueOf(getCellValue(cell)));
+                        student.setStudentId((String) getCellValue(cell));
                         break;
                     case COLUMN_INDEX_NAME:
                         student.setStudentName((String) getCellValue(cell));
